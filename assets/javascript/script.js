@@ -1,4 +1,6 @@
 
+const container = document.querySelector(".container");
+
 const imagesList = [
     "./assets/img/wayne-barnett-founder.ceo.jpg",
     "./assets/img/angela-caroll-chief-editor.jpg",
@@ -65,7 +67,13 @@ for (let i = 0; i < team.length; i++) {
 
    for (const key in profile) {
 
-    console.log(key + ":" + profile[key]);
+    const myDiv = document.createElement("div");
+
+    const singleInfo = key + ":" + profile[key];
+
+    myDiv.innerHTML = singleInfo;
+
+    container.appendChild(myDiv);
     
    }
 }
