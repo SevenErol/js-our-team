@@ -1,6 +1,8 @@
 
 const container = document.querySelector(".container");
 
+const row = document.querySelector(".row");
+
 const imagesList = [
     "./assets/img/wayne-barnett-founder.ceo.jpg",
     "./assets/img/angela-caroll-chief-editor.jpg",
@@ -13,49 +15,49 @@ const imagesList = [
 const team = [
 
     {
-        name: "Wayne Barnett",
+        Name: "Wayne Barnett",
 
-        role: "Founder CEO",
+        Role: "Founder CEO",
 
-        image: "./assets/img/wayne-barnett-founder.ceo.jpg"
+        image: "./assets/img/wayne-barnett-founder-ceo.jpg"
     },
 
     {
-        name: "Angela Caroll",
+        Name: "Angela Caroll",
 
-        role: "Chief Editor",
+        Role: "Chief Editor",
 
-        image: "./assets/img/angela-caroll-chief-editor.jpg"  
+        image: "./assets/img/angela-caroll-chief-editor.jpg"
     },
 
     {
-        name: "Walter Gordon",
+        Name: "Walter Gordon",
 
-        role: "Office Manager",
+        Role: "Office Manager",
 
         image: "./assets/img/walter-gordon-office-manager.jpg"
     },
 
     {
-        name: "Angela Lopez",
+        Name: "Angela Lopez",
 
-        role: "Social Media Manager",
+        Role: "Social Media Manager",
 
         image: "./assets/img/angela-lopez-social-media-manager.jpg"
     },
 
     {
-        name: "Scott Estrada",
+        Name: "Scott Estrada",
 
-        role: "Developer",
+        Role: "Developer",
 
         image: "./assets/img/scott-estrada-developer.jpg"
     },
 
     {
-        name: "Barbara Ramos",
+        Name: "Barbara Ramos",
 
-        role: "Graphic Designer",
+        Role: "Graphic Designer",
 
         image: "./assets/img/barbara-ramos-graphic-designer.jpg"
     }
@@ -65,15 +67,71 @@ for (let i = 0; i < team.length; i++) {
 
     const profile = team[i];
 
-   for (const key in profile) {
+    const column = document.createElement("div");
+
+    column.classList.add("col-4");
 
     const myDiv = document.createElement("div");
 
-    const singleInfo = key + ":" + profile[key];
+    myDiv.classList.add("card");
 
-    myDiv.innerHTML = singleInfo;
+    myDiv.classList.add("p-3");
 
-    container.appendChild(myDiv);
-    
-   }
+    const memberImage = document.createElement("img");
+
+    memberImage.classList.add("img-fluid");
+
+    const memberName = document.createElement("h6");
+
+    memberName.classList.add("text-center");
+
+    const memberRole = document.createElement("p");
+
+    memberRole.classList.add("text-center");
+
+    row.appendChild(column);
+
+    column.appendChild(myDiv);
+
+    myDiv.appendChild(memberImage);
+
+    myDiv.appendChild(memberName);
+
+    myDiv.appendChild(memberRole);
+
+    for (const key in profile) {
+
+        switch (key) {
+            case "Name":
+
+                memberName.innerHTML = profile[key];
+
+                break;
+
+            case "Role":
+
+                memberRole.innerHTML = profile[key];
+
+                break;
+
+            case "image":
+
+                memberImage.src = profile[key];
+
+                break;
+
+            default:
+                break;
+        }
+
+    }
 }
+
+
+// const myDiv = document.createElement("div");
+
+    // const singleInfo = key + ":" + profile[key];
+
+    // myDiv.innerHTML = singleInfo;
+
+    // container.appendChild(myDiv);
