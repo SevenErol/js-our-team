@@ -6,49 +6,49 @@ const row = document.querySelector(".row");
 const team = [
 
     {
-        Name: "Wayne Barnett",
+        name: "Wayne Barnett",
 
-        Role: "Founder CEO",
+        role: "Founder CEO",
 
         image: "./assets/img/wayne-barnett-founder-ceo.jpg"
     },
 
     {
-        Name: "Angela Caroll",
+        name: "Angela Caroll",
 
-        Role: "Chief Editor",
+        role: "Chief Editor",
 
         image: "./assets/img/angela-caroll-chief-editor.jpg"
     },
 
     {
-        Name: "Walter Gordon",
+        name: "Walter Gordon",
 
-        Role: "Office Manager",
+        role: "Office Manager",
 
         image: "./assets/img/walter-gordon-office-manager.jpg"
     },
 
     {
-        Name: "Angela Lopez",
+        name: "Angela Lopez",
 
-        Role: "Social Media Manager",
+        role: "Social Media Manager",
 
         image: "./assets/img/angela-lopez-social-media-manager.jpg"
     },
 
     {
-        Name: "Scott Estrada",
+        name: "Scott Estrada",
 
-        Role: "Developer",
+        role: "Developer",
 
         image: "./assets/img/scott-estrada-developer.jpg"
     },
 
     {
-        Name: "Barbara Ramos",
+        name: "Barbara Ramos",
 
-        Role: "Graphic Designer",
+        role: "Graphic Designer",
 
         image: "./assets/img/barbara-ramos-graphic-designer.jpg"
     }
@@ -100,13 +100,13 @@ for (let i = 0; i < team.length; i++) {
     for (const key in profile) {
 
         switch (key) {
-            case "Name":
+            case "name":
 
                 memberName.innerHTML = profile[key];
 
                 break;
 
-            case "Role":
+            case "role":
 
                 memberRole.innerHTML = profile[key];
 
