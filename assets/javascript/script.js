@@ -27,34 +27,45 @@ const team = [
     },
 
     {
-        name: "Angela Caroll",
+        name: "Walter Gordon",
 
-        role: "Chief Editor",
+        role: "Office Manager",
 
         image: "./assets/img/walter-gordon-office-manager.jpg"
     },
 
     {
-        name: "Angela Caroll",
+        name: "Angela Lopez",
 
-        role: "Chief Editor",
+        role: "Social Media Manager",
 
         image: "./assets/img/angela-lopez-social-media-manager.jpg"
     },
 
     {
-        name: "Angela Caroll",
+        name: "Scott Estrada",
 
-        role: "Chief Editor",
+        role: "Developer",
 
         image: "./assets/img/scott-estrada-developer.jpg"
     },
 
     {
-        name: "Angela Caroll",
+        name: "Barbara Ramos",
 
-        role: "Chief Editor",
+        role: "Graphic Designer",
 
         image: "./assets/img/barbara-ramos-graphic-designer.jpg"
     }
 ];
+
+for (let i = 0; i < team.length; i++) {
+
+    const profile = team[i];
+
+   for (const key in profile) {
+
+    console.log(key + ":" + profile[key]);
+    
+   }
+}
