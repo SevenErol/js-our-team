@@ -141,12 +141,3 @@ for (let i = 0; i < team.length; i++) {
 
     }
 }
-
-
-// const myDiv = document.createElement("div");
-
-    // const singleInfo = key + ":" + profile[key];
-
-    // myDiv.innerHTML = singleInfo;
-
-    // container.appendChild(myDiv);
