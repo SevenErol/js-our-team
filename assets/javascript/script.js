@@ -10,7 +10,7 @@ const team = [
 
         role: "Founder CEO",
 
-        image: "./assets/img/wayne-barnett-founder-ceo.jpg"
+        image: "wayne-barnett-founder-ceo.jpg"
     },
 
     {
@@ -18,7 +18,7 @@ const team = [
 
         role: "Chief Editor",
 
-        image: "./assets/img/angela-caroll-chief-editor.jpg"
+        image: "angela-caroll-chief-editor.jpg"
     },
 
     {
@@ -26,7 +26,7 @@ const team = [
 
         role: "Office Manager",
 
-        image: "./assets/img/walter-gordon-office-manager.jpg"
+        image: "walter-gordon-office-manager.jpg"
     },
 
     {
@@ -34,7 +34,7 @@ const team = [
 
         role: "Social Media Manager",
 
-        image: "./assets/img/angela-lopez-social-media-manager.jpg"
+        image: "angela-lopez-social-media-manager.jpg"
     },
 
     {
@@ -42,7 +42,7 @@ const team = [
 
         role: "Developer",
 
-        image: "./assets/img/scott-estrada-developer.jpg"
+        image: "scott-estrada-developer.jpg"
     },
 
     {
@@ -50,10 +50,24 @@ const team = [
 
         role: "Graphic Designer",
 
-        image: "./assets/img/barbara-ramos-graphic-designer.jpg"
+        image: "barbara-ramos-graphic-designer.jpg"
     }
 ];
 
+function generateURL(objectList) {
+
+    for (let i = 0; i < objectList.length; i++) {
+
+        let stringImage = objectList[i].image;
+
+        let imageURL = "./assets/img/" + stringImage;
+
+        objectList[i].image = imageURL
+    }
+    
+}
+
+generateURL(team);
 
 for (let i = 0; i < team.length; i++) {
 
@@ -97,30 +111,10 @@ for (let i = 0; i < team.length; i++) {
 
     cardBody.appendChild(memberRole);
 
-    for (const key in profile) {
+    memberName.innerHTML = profile['name'];
 
-        switch (key) {
-            case "name":
+    memberRole.innerHTML = profile["role"];
 
-                memberName.innerHTML = profile[key];
+    memberImage.src = profile["image"];
 
-                break;
-
-            case "role":
-
-                memberRole.innerHTML = profile[key];
-
-                break;
-
-            case "image":
-
-                memberImage.src = profile[key];
-
-                break;
-
-            default:
-                break;
-        }
-
-    }
 }
