@@ -71,17 +71,21 @@ for (let i = 0; i < team.length; i++) {
 
     column.classList.add("col-4");
 
-    const myDiv = document.createElement("div");
+    const card = document.createElement("div");
 
-    myDiv.classList.add("card");
+    card.classList.add("card");
 
-    myDiv.classList.add("p-3");
+    card.classList.add("mb-5");
+
+    const cardBody = document.createElement("div");
+
+    cardBody.classList.add("card-body");
 
     const memberImage = document.createElement("img");
 
     memberImage.classList.add("img-fluid");
 
-    const memberName = document.createElement("h6");
+    const memberName = document.createElement("h5");
 
     memberName.classList.add("text-center");
 
@@ -91,13 +95,15 @@ for (let i = 0; i < team.length; i++) {
 
     row.appendChild(column);
 
-    column.appendChild(myDiv);
+    column.appendChild(card);
 
-    myDiv.appendChild(memberImage);
+    card.appendChild(memberImage);
 
-    myDiv.appendChild(memberName);
+    card.appendChild(cardBody);
 
-    myDiv.appendChild(memberRole);
+    cardBody.appendChild(memberName);
+
+    cardBody.appendChild(memberRole);
 
     for (const key in profile) {
 

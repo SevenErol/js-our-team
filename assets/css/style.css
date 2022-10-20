@@ -8,3 +8,11 @@
     width: 30%;
     margin: auto;
 }
+
+body {
+    background-color: #f1f1f1;
+}
+
+.card {
+    border-radius: 0;
+}
