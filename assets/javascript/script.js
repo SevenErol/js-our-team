@@ -4,13 +4,14 @@ const container = document.querySelector(".container");
 const row = document.querySelector(".row");
 
 const imagesList = [
-    "./assets/img/wayne-barnett-founder.ceo.jpg",
+    "./assets/img/wayne-barnett-founder-ceo.jpg",
     "./assets/img/angela-caroll-chief-editor.jpg",
     "./assets/img/walter-gordon-office-manager.jpg",
     "./assets/img/angela-lopez-social-media-manager.jpg",
     "./assets/img/scott-estrada-developer.jpg",
     "./assets/img/barbara-ramos-graphic-designer.jpg"
 ];
+
 
 const team = [
 
@@ -19,7 +20,7 @@ const team = [
 
         Role: "Founder CEO",
 
-        image: "./assets/img/wayne-barnett-founder-ceo.jpg"
+        image: ""
     },
 
     {
@@ -27,7 +28,7 @@ const team = [
 
         Role: "Chief Editor",
 
-        image: "./assets/img/angela-caroll-chief-editor.jpg"
+        image: ""
     },
 
     {
@@ -35,7 +36,7 @@ const team = [
 
         Role: "Office Manager",
 
-        image: "./assets/img/walter-gordon-office-manager.jpg"
+        image: ""
     },
 
     {
@@ -43,7 +44,7 @@ const team = [
 
         Role: "Social Media Manager",
 
-        image: "./assets/img/angela-lopez-social-media-manager.jpg"
+        image: ""
     },
 
     {
@@ -51,7 +52,7 @@ const team = [
 
         Role: "Developer",
 
-        image: "./assets/img/scott-estrada-developer.jpg"
+        image: ""
     },
 
     {
@@ -59,9 +60,17 @@ const team = [
 
         Role: "Graphic Designer",
 
-        image: "./assets/img/barbara-ramos-graphic-designer.jpg"
+        image: ""
     }
 ];
+
+for (let i = 0; i < imagesList.length; i++) {
+
+    team[i].image = imagesList[i];
+
+}
+
+
 
 for (let i = 0; i < team.length; i++) {
 
